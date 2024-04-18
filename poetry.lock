@@ -165,17 +165,6 @@ test = ["anyio[trio]", "coverage[toml] (>=7)", "exceptiongroup (>=1.2.0)", "hypo
 trio = ["trio (>=0.23)"]
 
 [[package]]
-name = "appdirs"
-version = "1.4.4"
-description = "A small Python module for determining appropriate platform-specific dirs, e.g. a \"user data dir\"."
-optional = false
-python-versions = "*"
-files = [
-    {file = "appdirs-1.4.4-py2.py3-none-any.whl", hash = "sha256:a841dacd6b99318a741b166adb07e19ee71a274450e68237b4650ca1055ab128"},
-    {file = "appdirs-1.4.4.tar.gz", hash = "sha256:7d5d0167b2b1ba821647616af46a749d1c653740dd0d2415100fe26e27afdf41"},
-]
-
-[[package]]
 name = "asttokens"
 version = "2.4.1"
 description = "Annotate AST trees with source code positions"
@@ -496,25 +485,6 @@ files = [
 
 [package.extras]
 tests = ["asttokens (>=2.1.0)", "coverage", "coverage-enable-subprocess", "ipython", "littleutils", "pytest", "rich"]
-
-[[package]]
-name = "fastapi"
-version = "0.110.1"
-description = "FastAPI framework, high performance, easy to learn, fast to code, ready for production"
-optional = false
-python-versions = ">=3.8"
-files = [
-    {file = "fastapi-0.110.1-py3-none-any.whl", hash = "sha256:5df913203c482f820d31f48e635e022f8cbfe7350e4830ef05a3163925b1addc"},
-    {file = "fastapi-0.110.1.tar.gz", hash = "sha256:6feac43ec359dfe4f45b2c18ec8c94edb8dc2dfc461d417d9e626590c071baad"},
-]
-
-[package.dependencies]
-pydantic = ">=1.7.4,<1.8 || >1.8,<1.8.1 || >1.8.1,<2.0.0 || >2.0.0,<2.0.1 || >2.0.1,<2.1.0 || >2.1.0,<3.0.0"
-starlette = ">=0.37.2,<0.38.0"
-typing-extensions = ">=4.8.0"
-
-[package.extras]
-all = ["email-validator (>=2.0.0)", "httpx (>=0.23.0)", "itsdangerous (>=1.1.0)", "jinja2 (>=2.11.2)", "orjson (>=3.2.1)", "pydantic-extra-types (>=2.0.0)", "pydantic-settings (>=2.0.0)", "python-multipart (>=0.0.7)", "pyyaml (>=5.3.1)", "ujson (>=4.0.1,!=4.0.2,!=4.1.0,!=4.2.0,!=4.3.0,!=5.0.0,!=5.1.0)", "uvicorn[standard] (>=0.12.0)"]
 
 [[package]]
 name = "filelock"
@@ -957,19 +927,19 @@ referencing = ">=0.31.0"
 
 [[package]]
 name = "llama-index"
-version = "0.10.29"
+version = "0.10.30"
 description = "Interface between LLMs and your data"
 optional = false
 python-versions = "<4.0,>=3.8.1"
 files = [
-    {file = "llama_index-0.10.29-py3-none-any.whl", hash = "sha256:df61c04c05ddf0488aa87085c464e52ff215338933de771de46e2e4965719eaa"},
-    {file = "llama_index-0.10.29.tar.gz", hash = "sha256:f83b826007a8b4570a165f5db8ce770cf186adf7686ec0ddbeccf1887fcd5394"},
+    {file = "llama_index-0.10.30-py3-none-any.whl", hash = "sha256:7083014be8f74c6037cc33d629985a7505ee3c89b972503f8dd7d4ac7c45a4f4"},
+    {file = "llama_index-0.10.30.tar.gz", hash = "sha256:58fab1047c75e39803e8c394fab7d5e81ce97f27281bf7cba6bea40a7328562e"},
 ]
 
 [package.dependencies]
 llama-index-agent-openai = ">=0.1.4,<0.3.0"
 llama-index-cli = ">=0.1.2,<0.2.0"
-llama-index-core = ">=0.10.29,<0.11.0"
+llama-index-core = ">=0.10.30,<0.11.0"
 llama-index-embeddings-openai = ">=0.1.5,<0.2.0"
 llama-index-indices-managed-llama-cloud = ">=0.1.2,<0.2.0"
 llama-index-legacy = ">=0.9.48,<0.10.0"
@@ -998,13 +968,13 @@ openai = ">=1.14.0"
 
 [[package]]
 name = "llama-index-cli"
-version = "0.1.11"
+version = "0.1.12"
 description = "llama-index cli"
 optional = false
 python-versions = "<4.0,>=3.8.1"
 files = [
-    {file = "llama_index_cli-0.1.11-py3-none-any.whl", hash = "sha256:44bc32af6d9bc0b523ad284f24fa1ec17288491243fe6d7c7b4770b3245dbb84"},
-    {file = "llama_index_cli-0.1.11.tar.gz", hash = "sha256:5de707e125aa877d70c61da70cc44fea72a9f7adb77f413b51f73b1deffdd750"},
+    {file = "llama_index_cli-0.1.12-py3-none-any.whl", hash = "sha256:d80d546786f02d3f16f6183b8e86b22b8b5c33a1500923659f2ccbff8d5df634"},
+    {file = "llama_index_cli-0.1.12.tar.gz", hash = "sha256:3cf1f706c3c69c6b1aab07fca7faad3959db1709808efd50491b669d38b0b580"},
 ]
 
 [package.dependencies]
@@ -1014,13 +984,13 @@ llama-index-llms-openai = ">=0.1.1,<0.2.0"
 
 [[package]]
 name = "llama-index-core"
-version = "0.10.29"
+version = "0.10.30"
 description = "Interface between LLMs and your data"
 optional = false
 python-versions = "<4.0,>=3.8.1"
 files = [
-    {file = "llama_index_core-0.10.29-py3-none-any.whl", hash = "sha256:105eace45d877f31ff330e9afe7e86bd212b776b96d594862f24c60e03ab99b9"},
-    {file = "llama_index_core-0.10.29.tar.gz", hash = "sha256:65188c9917ec0847005ebd4343d7eaf9ddc80cea50d876a02eccbb16f1684371"},
+    {file = "llama_index_core-0.10.30-py3-none-any.whl", hash = "sha256:2f291ce2975f9dbf0ea87d684d3d8122ce216265f468f32baa2cf4ecfb34ed2a"},
+    {file = "llama_index_core-0.10.30.tar.gz", hash = "sha256:bed3f683606a0b0eb0839677c935a4b57b7bae509a95d380e51c6225630660e0"},
 ]
 
 [package.dependencies]
@@ -1166,21 +1136,6 @@ files = [
 [package.dependencies]
 llama-index-core = ">=0.10.1,<0.11.0"
 llama-index-llms-openai = ">=0.1.1,<0.2.0"
-
-[[package]]
-name = "llama-index-packs-vectara-rag"
-version = "0.1.3"
-description = "llama-index packs vectara_rag integration"
-optional = false
-python-versions = ">=3.8.1,<4.0"
-files = [
-    {file = "llama_index_packs_vectara_rag-0.1.3-py3-none-any.whl", hash = "sha256:24b66591f4e54d477900dfa5fce553a2bca7e5a305a358620fc4d3b632c03271"},
-    {file = "llama_index_packs_vectara_rag-0.1.3.tar.gz", hash = "sha256:184a565ddaeac3699a6455a76db9d79f90c2bacc11ad7ef349c54fb9dc5e6eb9"},
-]
-
-[package.dependencies]
-llama-index-core = ">=0.10.1,<0.11.0"
-llama-index-indices-managed-vectara = ">=0.1.1,<0.2.0"
 
 [[package]]
 name = "llama-index-program-openai"
@@ -1641,13 +1596,13 @@ files = [
 
 [[package]]
 name = "openai"
-version = "1.20.0"
+version = "1.22.0"
 description = "The official Python library for the openai API"
 optional = false
 python-versions = ">=3.7.1"
 files = [
-    {file = "openai-1.20.0-py3-none-any.whl", hash = "sha256:9fcc75256b2425393800e358cd520b02b5ab1a8731921e45aa7ae6aec3ee8187"},
-    {file = "openai-1.20.0.tar.gz", hash = "sha256:d7c0e824b7da3c043731943965c737595cf9631c913b7a1464c502fdf492b9a9"},
+    {file = "openai-1.22.0-py3-none-any.whl", hash = "sha256:8f1d73c992f3558636661ba6681cdad75db30b5266ba19d938b1b5e0633f4bf7"},
+    {file = "openai-1.22.0.tar.gz", hash = "sha256:6e6f287a41f98fc36f65a0237845525cfdeb4db8d3e3f6f26efd0a00c7c345c1"},
 ]
 
 [package.dependencies]
@@ -2649,23 +2604,6 @@ pure-eval = "*"
 tests = ["cython", "littleutils", "pygments", "pytest", "typeguard"]
 
 [[package]]
-name = "starlette"
-version = "0.37.2"
-description = "The little ASGI library that shines."
-optional = false
-python-versions = ">=3.8"
-files = [
-    {file = "starlette-0.37.2-py3-none-any.whl", hash = "sha256:6fe59f29268538e5d0d182f2791a479a0c64638e6935d1c6989e63fb2699c6ee"},
-    {file = "starlette-0.37.2.tar.gz", hash = "sha256:9af890290133b79fc3db55474ade20f6220a364a0402e0b556e7cd5e1e093823"},
-]
-
-[package.dependencies]
-anyio = ">=3.4.0,<5"
-
-[package.extras]
-full = ["httpx (>=0.22.0)", "itsdangerous", "jinja2", "python-multipart (>=0.0.7)", "pyyaml"]
-
-[[package]]
 name = "streamlit"
 version = "1.33.0"
 description = "A faster way to build and share data apps"
@@ -2818,13 +2756,13 @@ blobfile = ["blobfile (>=2)"]
 
 [[package]]
 name = "together"
-version = "1.1.1"
+version = "1.1.2"
 description = "Python client for Together's Cloud Platform!"
 optional = false
 python-versions = "<4.0,>=3.8"
 files = [
-    {file = "together-1.1.1-py3-none-any.whl", hash = "sha256:d89620e59fd1fc165d8b0b0e8b84f5cfa917c158359892f0c9b1e173b6b462ae"},
-    {file = "together-1.1.1.tar.gz", hash = "sha256:3e10e30fe892c8c26da4ac0e356dd7c2fb018d1535b9d25797fe45199892ffdf"},
+    {file = "together-1.1.2-py3-none-any.whl", hash = "sha256:8086f6b7347a4f00ea70b8cfc333fdf8f32b0acf7214885f77ed8d6a6060751e"},
+    {file = "together-1.1.2.tar.gz", hash = "sha256:88e287b56b5de91e02667b9e0d9cbfed1445a2eead4a925c5f06e1d54b163bb8"},
 ]
 
 [package.dependencies]
@@ -2851,26 +2789,6 @@ files = [
     {file = "toml-0.10.2-py2.py3-none-any.whl", hash = "sha256:806143ae5bfb6a3c6e736a764057db0e6a0e05e338b5630894a5f779cabb4f9b"},
     {file = "toml-0.10.2.tar.gz", hash = "sha256:b3bda1d108d5dd99f4a20d24d9c348e91c4db7ab1b749200bded2f839ccbe68f"},
 ]
-
-[[package]]
-name = "tonic-validate"
-version = "4.0.6"
-description = "RAG evaluation metrics."
-optional = false
-python-versions = "<4.0.0,>=3.8.1"
-files = [
-    {file = "tonic_validate-4.0.6-py3-none-any.whl", hash = "sha256:adb5183d7a13d20adf7d293eb2b8a50f70a7948f9bf28f789c26da294180984c"},
-    {file = "tonic_validate-4.0.6.tar.gz", hash = "sha256:6426b714a8e7b13c1568887dda9e870b9678d28c1e776d2cf98ef6e5fb9dd6c5"},
-]
-
-[package.dependencies]
-appdirs = ">=1.4.4,<2.0.0"
-openai = ">=1.0.0"
-pydantic = ">=2.6.4,<3.0.0"
-python-dotenv = ">=1.0.1,<2.0.0"
-tiktoken = ">=0.5.2,<0.7.0"
-tqdm = ">=4.66.2,<5.0.0"
-typing-extensions = ">=4.10.0,<5.0.0"
 
 [[package]]
 name = "toolz"
@@ -3267,4 +3185,4 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "0c23485ae959ce4f25cea32a1bac6280b00063c96826b50d5355c969f0b594dd"
+content-hash = "bea2305c467444d1ec33e8b69dd436d7d127efbae6decbf377f6e8bf32d7151d"
