@@ -1,12 +1,14 @@
 from tonic_validate import Benchmark, ValidateApi, ValidateScorer
 
+
 # Function to simulate getting a response and context from your LLM
 # Replace this with your actual function call
 def get_rag_response(question):
     return {
         "llm_answer": "Paris",
-        "llm_context_list": ["Paris is the capital of France."]
+        "llm_context_list": ["Paris is the capital of France."],
     }
+
 
 benchmark = Benchmark(questions=["What is the capital of France?"], answers=["Paris"])
 # Score the responses for each question and answer pair

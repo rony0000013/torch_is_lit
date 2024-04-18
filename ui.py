@@ -1,4 +1,5 @@
 import streamlit as st
+
 # from file_index import retriever
 from together import Together
 from pathlib import Path
@@ -10,6 +11,7 @@ import json
 st.set_page_config(page_title="Torch is Lit", page_icon="🔥", layout="wide")
 st.title("Torch is Lit 🔥❤️‍🔥")
 
+
 def clear_chat_history():
     st.session_state.messages_rag = [
         {"role": "assistant", "content": "How may I assist you today?"}
@@ -17,6 +19,7 @@ def clear_chat_history():
     st.session_state.messages_code = [
         {"role": "assistant", "content": "How may I assist your code today?"}
     ]
+
 
 @st.cache_data
 def together_chat(messages):
@@ -26,10 +29,11 @@ def together_chat(messages):
     )
     return response.choices[0].message.content
 
+
 def rag_prepare(st_files):
     if st_files:
         for file in st_files:
-            with open(os.path.join('data', file.name), "wb") as f:
+            with open(os.path.join("data", file.name), "wb") as f:
                 f.write(file.read())
 
         for root, dirs, files in os.walk("data"):
@@ -43,7 +47,11 @@ def rag_prepare(st_files):
                 files = [
                     (
                         "file",
-                        ("file", open(os.path.join(root, file), "rb"), "application/octet-stream"),
+                        (
+                            "file",
+                            open(os.path.join(root, file), "rb"),
+                            "application/octet-stream",
+                        ),
                     )
                 ]
                 headers = {
@@ -52,7 +60,14 @@ def rag_prepare(st_files):
                     "x-api-key": os.environ["VECTARA_API_KEY"],
                 }
 
-                res = requests.request("POST", url, headers=headers, data=payload, files=files, params=params)
+                res = requests.request(
+                    "POST",
+                    url,
+                    headers=headers,
+                    data=payload,
+                    files=files,
+                    params=params,
+                )
                 print(res.json())
         # for filename in os.listdir("data"):
         #     file_path = os.path.join("data", filename)
@@ -110,8 +125,13 @@ def rag_summarize(prompt):
 
     response = requests.request("POST", url, headers=headers, data=payload)
     if response.status_code != 200:
-        return {"summary": [{"text": "I'm sorry, I couldn't find the answer to your question."}], "response": []}
-    return response.json()['responseSet'][0]
+        return {
+            "summary": [
+                {"text": "I'm sorry, I couldn't find the answer to your question."}
+            ],
+            "response": [],
+        }
+    return response.json()["responseSet"][0]
 
 
 with st.sidebar:
@@ -152,9 +172,6 @@ with st.sidebar:
     st.button("Clear Chat History ♻️🗑️", on_click=clear_chat_history)
 
 
-
-
-
 tab1, tab2 = st.tabs(["Lit Torch 🔥❤️‍🔥", "Lit Code 🧑‍💻⚡"])
 with tab1:
     st.header("Lit Torch 🔥❤️‍🔥")
@@ -173,7 +190,7 @@ with tab1:
     if prompt := st.chat_input("Type a message here..."):
         st.session_state.messages_rag.append({"role": "user", "content": prompt})
         with st.spinner("Thinking... 🧠"):
-            response = rag_summarize(prompt)['summary'][0]['text']
+            response = rag_summarize(prompt)["summary"][0]["text"]
             # response = prompt
         st.session_state.messages_rag.append({"role": "assistant", "content": response})
 
